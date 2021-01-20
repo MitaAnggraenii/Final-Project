@@ -26,3 +26,24 @@ public class Pelanggan {
     public IntegerProperty IDProperty(){
         return ID;
     }
+    
+      public void setNama(String Nama){
+        this.NamaPelanggan.set(Nama);
+    }
+    
+    public void setID(int id){
+        this.ID.set(id);
+    }
+    
+    public int getID(){
+        return ID.get();
+    }
+    
+    public String getNama(){
+        return NamaPelanggan.get();
+    }
+    
+    public Makanan getMakanan(){
+        return makanan;
+    }
+    
