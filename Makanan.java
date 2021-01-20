@@ -33,6 +33,7 @@ public abstract class Makanan {
         return Total.get();
     }
     
+    
     public void setNama(String Name){
         this.Nama.set(Name);
     }
@@ -40,3 +41,27 @@ public abstract class Makanan {
     public void setHarga(int harga){
         this.Harga.set(harga);
     }
+
+     public void setJumlah(int jumlah){
+        this.jumlah.set(jumlah);
+    }
+    
+    public StringProperty NamaProperty(){
+        return Nama;
+    }
+    
+    public IntegerProperty HargaProperty(){
+        return Harga;
+    }
+    
+    public IntegerProperty JumlahProperty(){
+        return jumlah;
+    }
+    
+    public IntegerProperty TotalProperty(){
+        return Total;
+    }
+    public IntegerProperty IDProperty(){
+        return ID;
+    }
+}
