@@ -8,3 +8,10 @@ public class Sandwich extends Makanan {
    
      public Sandwich(int ID,int Jumlah) {
         super(ID,Jumlah);
+        this.jumlah = new SimpleIntegerProperty(Jumlah);
+        super.setNama("Sandwich");
+        super.setHarga(15000);
+        super.TotalH();
+    }
+}
+
