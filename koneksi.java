@@ -25,3 +25,16 @@ public static Connection koneksi(String driver)throws SQLException {
             System.out.println("Koneksi Gagal "+e);
         }
        }
+       else if ("SQLITE".equals(driver)){
+           try {
+                    Class.forName("org.sqlite.JDBC");
+                    conn = DriverManager.getConnection("jdbc:sqlite:D:\\tubes\\sqlite\\PemesananMakanan.sqlite");
+                    return conn;
+                } catch (ClassNotFoundException ex) {
+                    System.out.println("Librari tidak ada");
+                }
+       }
+       return null; 
+    }
+}
+
