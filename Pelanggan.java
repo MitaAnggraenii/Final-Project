@@ -34,6 +34,25 @@ public class Pelanggan {
     public void setID(int id){
         this.ID.set(id);
     }
+    public StringProperty NamaMakananProperty(){
+        return makanan.NamaProperty();
+    }
+    
+    public IntegerProperty HargaProperty(){
+        return makanan.HargaProperty();
+    }
+    
+    public IntegerProperty JumlahProperty(){
+        return makanan.JumlahProperty();
+    }
+    
+    public IntegerProperty TotalProperty(){
+        return makanan.TotalProperty();
+    }
+    
+    
+}
+
     
     public int getID(){
         return ID.get();
