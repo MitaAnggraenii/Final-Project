@@ -71,4 +71,52 @@ public class PemesananMakanan extends Application {
         btn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                if (cb.getValue() == "Burger"){
+                   
+                   data.add(new Pelanggan (count,
+                       new Burger(count,
+                           Integer.parseInt(
+                           txt2.getText().toString()
+                           )),txt.getText().toString()
+                       ));
+                   count = count+1;
+               }
+               else if (cb.getValue() == "Sandwich") {
+                   data.add(new Pelanggan (count,
+                       new Sandwich(count,
+                           Integer.parseInt(
+                           txt2.getText().toString()
+                           )),txt.getText().toString()
+                       )); 
+                   count = count+1;
+               }
+               
+                txt.clear();
+                txt2.clear();
+                cb.setValue(null);
+            }
+        });
+//        x=x+1;
+        Scene scene = new Scene(grid);
+        vb.setStyle("-fx-background-color : CYAN ;");
+        grid.setStyle("-fx-background-color : CYAN ;");
+        grid.setStyle("-fx-padding: 10;");
+        primaryStage.setTitle("Burger Sandwich ASEEK");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    /**
+     * The main() method is ignored in correctly deployed JavaFX application.
+     * main() serves only as fallback in case the application can not be
+     * launched through deployment artifacts, e.g., in IDEs with limited FX
+     * support. NetBeans ignores main().
+     *
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+
                
