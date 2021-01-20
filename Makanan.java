@@ -14,3 +14,29 @@ public abstract class Makanan {
         this.Total = new SimpleIntegerProperty();
         this.ID = new SimpleIntegerProperty();
     }
+     public void TotalH(){
+        this.Total.set(getJumlah() * getHarga());
+    }
+    
+    public int getHarga(){
+        return Harga.get();
+    }
+    
+    public String getNama(){
+        return Nama.get();
+    }
+    
+    public int getJumlah(){
+        return jumlah.get();
+    }
+    public double getTotal(){
+        return Total.get();
+    }
+    
+    public void setNama(String Name){
+        this.Nama.set(Name);
+    }
+    
+    public void setHarga(int harga){
+        this.Harga.set(harga);
+    }
