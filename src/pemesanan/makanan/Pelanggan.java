@@ -17,5 +17,23 @@ public class Pelanggan {
         this.NamaPelanggan = new SimpleStringProperty(Nama);
     }
     
+    public StringProperty NamaPelangganProperty(){
+        return NamaPelanggan;
+    }
     
+    public IntegerProperty IDProperty(){
+        return ID;
+    }
+
+    public void setNama(String Nama){
+        this.NamaPelanggan.set(Nama);
+    }
+    
+    public void setID(int id){
+        this.ID.set(id);
+    }
+    
+    public int getID(){
+        return ID.get();
+    }
    
