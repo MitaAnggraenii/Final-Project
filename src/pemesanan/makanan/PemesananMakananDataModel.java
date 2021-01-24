@@ -92,3 +92,37 @@ public class PemesananMakananDataModel {
             ResultSet rsBurger = CONN.createStatement().executeQuery(sqlBurger);
             ResultSet rsSandwich = CONN.createStatement().executeQuery(sqlSandwich);
             while (rsPelanggan.next() && rsMakanan.next()) {
+                if (rsMakanan.getString("nama").equals("Burger")) {
+                    rsBurger.next();
+                    burger = new Burger(
+                            rsBurger.getInt("ID"),
+                            rsMakanan.getInt("jumlah"));
+                    
+                    data.add(new Pelanggan(rsPelanggan.getInt(1),
+                            burger, rsPelanggan.getString("NamaPelanggan")));
+                } else {
+                    rsSandwich.next();
+                    sandwich = new Sandwich(
+                            rsBurger.getInt("ID"),
+                            rsMakanan.getInt("jumlah"));
+                    
+                    data.add(new Pelanggan(rsPelanggan.getInt(1),
+                            sandwich, rsPelanggan.getString("NamaPelanggan")));
+                }
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(PemesananMakananDataModel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return data;
+    }
+
+    public int ID() throws SQLException {
+        String sql = "SELECT MAX(ID) from pelanggan";
+        ResultSet rs = CONN.createStatement().executeQuery(sql);
+        while (rs.next()) {
+            return rs.getInt(1) == 0 ? 101 : rs.getInt(1) + 1;
+        }
+        return 101;
+    }
+}
+
