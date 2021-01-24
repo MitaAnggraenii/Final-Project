@@ -17,6 +17,7 @@ Pembagian Tugas
 ### Class Diagram
 mermaid
 classDiagram
+
     Makanan <|-- Burger
     Makanan <|-- Sandwich
     Pelanggan -- Makanan
@@ -64,7 +65,8 @@ classDiagram
         +TotalH()
     }
     
-    ### ER Diagram
+
+### ER Diagram
 ```mermaid
 erDiagram
     Pelanggan ||..|| Makanan : order
