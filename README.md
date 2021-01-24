@@ -63,5 +63,29 @@ classDiagram
         -int Jumlah
         +TotalH()
     }
+    
+    ### ER Diagram
+```mermaid
+erDiagram
+    Pelanggan ||..|| Makanan : order
+    Makanan ||--|| Burger : is
+    Makanan || -- || Sandwich : is
 
-
+    Makanan{
+        String Nama
+        int ID
+        int jumlah
+        int Harga
+        int Total
+    }
+    Burger{
+        int jumlah
+    }
+    Sandwich{
+        int jumlah
+    }
+    Pelanggan{
+        int ID
+        String NamaPelanggan
+    }
+```
