@@ -98,3 +98,52 @@ erDiagram
         String NamaPelanggan
     }
 ```
+
+### Design Class Diagram for JavaFX and Database
+```mermaid
+classDiagram
+    Makanan <|-- Burger
+    Makanan <|-- Sandwich
+    Pelanggan "*".."*" Makanan : order
+    Pelanggan o-- PemesananMakananDataModel : Data Modeling
+    PemesananMakananDataModel --> koneksi : DB Connection
+
+    class Makanan{
+      <<abstract>>
+        -StringProperty Nama
+        -IntegerProperty ID
+        -IntegerProperty jumlah
+        -IntegerProperty Harga
+        -IntegerProperty Total
+        
+    }
+    
+    class Burger{
+      -IntegerProperty jumlah
+    }
+    class Sandwich{
+      -IntegerProperty jumlah
+    }
+    class Pelanggan{
+        -StringProperty NamaPelanggan
+        -IntegerProperty ID
+        +Makanan makanan
+        +Burger burger
+        +Sandwich sandwich
+    }
+
+    class PemesananMakananDataModel{
+        Connection CONN
+        inputDataB(Pelanggan pelanggan)
+        inputDataS(Pelanggan pelanggan)
+        getData()
+        ID()
+    }
+
+    class koneksi{
+        - String user
+        - String pass
+        - String MYSQLhost
+        koneksi(String driver)
+    }
+```
