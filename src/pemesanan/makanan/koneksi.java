@@ -8,4 +8,12 @@ public class koneksi {
         public static String user = "root";
         public static String pass = "";
         public static Connection koneksi(String driver)throws SQLException {
-        Connection conn = null;
+                Connection conn = null;
+                if ("MYSQL".equals(driver)){
+                        try {
+                                Class.forName("com.mysql.jdbc.Driver");
+                                conn = DriverManager.getConnection(MYSQLhost,user,pass);
+                                System.out.println("Koneksi Berhasil");
+                                return conn;
+                        }
+                
