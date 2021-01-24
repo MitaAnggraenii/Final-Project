@@ -17,6 +17,8 @@ public abstract class Makanan {
         this.ID = new SimpleIntegerProperty();
     }
     
+    
+    
     public void TotalH(){
         this.Total.set(getJumlah() * getHarga());
     }
@@ -25,46 +27,4 @@ public abstract class Makanan {
         return Harga.get();
     }
     
-    public String getNama(){
-        return Nama.get();
-    }
     
-    public int getJumlah(){
-        return jumlah.get();
-    }
-    public double getTotal(){
-        return Total.get();
-    }
-    
-    public void setNama(String Name){
-        this.Nama.set(Name);
-    }
-    
-    public void setHarga(int harga){
-        this.Harga.set(harga);
-    }
-    
-     public void setJumlah(int jumlah){
-        this.jumlah.set(jumlah);
-    }
-    
-    public StringProperty NamaProperty(){
-        return Nama;
-    }
-    
-    public IntegerProperty HargaProperty(){
-        return Harga;
-    }
-    
-    public IntegerProperty JumlahProperty(){
-        return jumlah;
-    }
-    
-    public IntegerProperty TotalProperty(){
-        return Total;
-    }
-    public IntegerProperty IDProperty(){
-        return ID;
-    }
-}
-
