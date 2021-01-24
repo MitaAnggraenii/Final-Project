@@ -18,9 +18,8 @@
 Untuk melihat diagram di bawah ini, instal plugin mermaid-diagram di https://github.com/Redisrupt/mermaid-diagrams
 
 ### Class Diagram
-mermaid
+```mermaid
 classDiagram
-
     Makanan <|-- Burger
     Makanan <|-- Sandwich
     Pelanggan -- Makanan
@@ -67,7 +66,8 @@ classDiagram
         -int Jumlah
         +TotalH()
     }
-    
+ ```   
+
 
 ### ER Diagram
 ```mermaid
