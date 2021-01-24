@@ -13,3 +13,55 @@ Pembagian Tugas
 5. Membuat kode program di netbeans (Diskusi melalui Google Meet : Mita, Della, Fista)
 6. Membuat kode program db helper di netbeans (Diskusi melalui Google Meet : Mita, Della, Fista)
 7. Membuat desain GUI di scene builder (Diskusi melalui Google Meet : Mita, Della, Fista)
+
+### Class Diagram
+mermaid
+classDiagram
+    Makanan <|-- Burger
+    Makanan <|-- Sandwich
+    Pelanggan -- Makanan
+    
+
+    class Makanan{
+    <<abstract>>
+        +Makanan(int ID,int Jumlah)
+        -String Nama
+        -int ID
+        -int jumlah
+        -int Harga
+        -int Total
+        +TotalH()*
+        +getHarga() int
+        +getNama() String
+        +getTotal() int
+        +getJumlah() int
+        +setNama()
+        +setHarga()
+        +setJumlah()
+        +getID() int
+    }
+    
+    class Pelanggan{
+        -int ID
+        -String NamaPelanggan
+        +Makanan makanan
+        +Burger burger
+        Sandwich sandwich
+        +setNama(String nama)
+        +SetID (int id) 
+        +getID() int
+        +getnama() String
+        +getMakananID() int
+    }
+
+    class Burger{
+        -int Jumlah
+        +TotalH()
+    }
+
+    class Sandwich{
+        -int Jumlah
+        +TotalH()
+    }
+
+
