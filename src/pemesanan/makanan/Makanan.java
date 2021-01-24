@@ -24,5 +24,27 @@ public abstract class Makanan {
     public int getHarga(){
         return Harga.get();
     }
+     public String getNama(){
+        return Nama.get();
+    }
+    
+    public int getJumlah(){
+        return jumlah.get();
+    }
+    public int getTotal(){
+        return Total.get();
+    }
+    
+    public void setNama(String Name){
+        this.Nama.set(Name);
+    }
+    
+    public void setHarga(int harga){
+        this.Harga.set(harga);
+    }
+    
+    public void setJumlah(int jumlah){
+        this.jumlah.set(jumlah);
+    }
     
     
