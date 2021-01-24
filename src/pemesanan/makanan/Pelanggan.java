@@ -47,3 +47,29 @@ public class Pelanggan {
         return ID.get();
     }
     
+     public String getNama(){
+        return NamaPelanggan.get();
+    }
+    
+    public Integer getMakananID(){
+        return makanan.getID();
+    }
+    
+     public StringProperty NamaMakananProperty(){
+        return makanan.NamaProperty();
+    }
+    
+    public IntegerProperty HargaProperty(){
+        return makanan.HargaProperty();
+    }
+    
+    public IntegerProperty JumlahProperty(){
+        return makanan.JumlahProperty();
+    }
+    
+    public IntegerProperty TotalProperty(){
+        return makanan.TotalProperty();
+    }
+    
+    
+}
