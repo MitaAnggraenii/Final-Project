@@ -76,3 +76,71 @@ public class PemesananMakanan extends Application {
         column5.setMinWidth(100);
         tabel.setItems(data);
         tabel.getColumns().setAll(column,column1,column2,column3,column4,column5);
+        
+         btn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    count = PMDM.ID();
+                } catch (SQLException ex) {
+                    Logger.getLogger(PemesananMakanan.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                if (cb.getValue().toString().equals("Burger")){
+                   
+                   pgn = new Pelanggan (count,
+                       new Burger(count,
+                           Integer.parseInt(
+                           txt2.getText().toString()
+                           )),txt.getText().toString()
+                       );
+                   data.add(pgn);
+                    try {
+                        PMDM.inputDataB(pgn);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(PemesananMakanan.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+               }
+               else if (cb.getValue().toString().equals("Sandwich")) {
+                   pgn = new Pelanggan (count,
+                       new Sandwich(count,
+                           Integer.parseInt(
+                           txt2.getText().toString()
+                           )),txt.getText().toString()
+                       );
+                   data.add(pgn);
+                    try {
+                        PMDM.inputDataS(pgn);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(PemesananMakanan.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+               }
+               
+                txt.clear();
+                txt2.clear();
+                cb.setValue(null);
+                
+            }
+        });
+//        x=x+1;
+        Scene scene = new Scene(grid);
+        vb.setStyle("-fx-background-color : CYAN ;");
+        grid.setStyle("-fx-background-color : CYAN ;");
+        grid.setStyle("-fx-padding: 10;");
+        primaryStage.setTitle("Burger Sandwich ASEEK");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    /**
+     * The main() method is ignored in correctly deployed JavaFX application.
+     * main() serves only as fallback in case the application can not be
+     * launched through deployment artifacts, e.g., in IDEs with limited FX
+     * support. NetBeans ignores main().
+     *
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
+
