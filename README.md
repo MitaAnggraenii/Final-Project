@@ -14,6 +14,10 @@
 6. Membuat kode program db helper di netbeans (Diskusi melalui Google Meet : Mita, Della, Fista)
 7. Membuat desain GUI di scene builder (Diskusi melalui Google Meet : Mita, Della, Fista)
 
+
+# Sistem Informasi Pemesanan Makanan
+'SI Pemesanan Makanan' merupakan Sistem Informasi yang dapat digunakan untuk menginput data Pemesanan Makanan yang dikhususkan untuk Booth Penjualan Burger dan Sandwich.
+
 # Desain
 Untuk melihat diagram di bawah ini, instal plugin mermaid-diagram di https://github.com/Redisrupt/mermaid-diagrams
 
