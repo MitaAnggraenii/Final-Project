@@ -16,4 +16,16 @@ public class koneksi {
                                 System.out.println("Koneksi Berhasil");
                                 return conn;
                         }
+                        catch (SQLException e) {
+            System.out.println("Koneksi Gagal "+e);
+        }
+        catch (ClassNotFoundException e){
+            System.out.println("Koneksi Gagal "+e);
+        }
+       }
+      
+       return null; 
+    }
+}
+
                 
