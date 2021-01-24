@@ -47,4 +47,28 @@ public abstract class Makanan {
         this.jumlah.set(jumlah);
     }
     
+    public StringProperty NamaProperty(){
+        return Nama;
+    }
+    
+    public IntegerProperty HargaProperty(){
+        return Harga;
+    }
+    
+    public IntegerProperty JumlahProperty(){
+        return jumlah;
+    }
+    
+    public IntegerProperty TotalProperty(){
+        return Total;
+    }
+    public IntegerProperty IDProperty(){
+        return ID;
+    }
+    
+    public Integer getID(){
+        return ID.get();
+    }
+}
+    
     
