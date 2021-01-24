@@ -17,8 +17,6 @@ public abstract class Makanan {
         this.ID = new SimpleIntegerProperty();
     }
     
-    
-    
     public void TotalH(){
         this.Total.set(getJumlah() * getHarga());
     }
