@@ -66,9 +66,9 @@ classDiagram
         -String NamaPelanggan
         +Makanan makanan
         +Burger burger
-        Sandwich sandwich
+        +Sandwich sandwich
         +setNama(String nama)
-        +SetID (int id) 
+        +setID (int id) 
         +getID() int
         +getnama() String
         +getMakananID() int
