@@ -16,6 +16,7 @@
 
 # Sistem Informasi Pemesanan Makanan
 'SI Pemesanan Makanan' merupakan Sistem Informasi yang dapat digunakan untuk menginput data Pemesanan Makanan yang dikhususkan untuk Booth Penjualan Burger dan Sandwich.
+Jadi, pertama user akan memasukkan nama. Selanjutnya user akan memilih jenis makanan yang akan dibeli yaitu burger atau sandwich. Berikutnya user akan memasukkan jumlah makanan yang akan dibeli. Setelah itu klik "Input". Dan data pembelian user tersimpan ke database. Untuk ID user atau pelanggan akan terisi otomatis, dimana ID nya akan melanjutkan ID pelanggan sebelumnya. Dan akan tampil pula total harga pembelian makanan.
 
 # Desain
 Untuk melihat diagram di bawah ini, instal plugin mermaid-diagram di https://github.com/Redisrupt/mermaid-diagrams
