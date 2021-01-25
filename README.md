@@ -22,6 +22,21 @@
 Untuk melihat diagram di bawah ini, instal plugin mermaid-diagram di https://github.com/Redisrupt/mermaid-diagrams
 
 ### Class Diagram
+Pada Class Diagram Sistem Pemesanan Makanan, terdapat 4 class yaitu : Pelanggan, Makanan, Burger, dan Sandwich.
+- Di dalam class Pelanggan terdapat beberapa atribut ID, NamaPelanggan, Makanan (merupakan atribut dari class Makanan), Burger (aribut dari class Burger), dan Sandwich (atribut dari class Sandwich). Di dalamnya juga terdapat beberapa method yaitu setNama, setID, getID, getNama, getMakanan.
+- Class Makanan. Class Makanan merupakan sebuah class abstract dan juga Superclass dari class Burger dan Sandwich. Di dalam class Makanan terdapat beberapa atribut, diantaranya : Nama, ID, Jumlah, Harga, dan Total. Dan juga terdapat beberapa method yaitu : Constructor Makanan, TotalH, getHarga, getNama, getTotal, getJumlah, setNama, setHarga, setJumlah, dan getID.
+- Class Burger dan Class Sandwich. Class Burger dan class Sandwich merupakan subclass dari class Makanan. Di dalamnya terdapat atribut Jumlah dan method TotalH.
+
+Untuk menentukan visibilitas anggota class (atribut dan method), notasi yang ditempatkan sebelum nama anggota yaitu :
+Public : +
+Private : -
+Protected : #
+
+Setiap class berelasi dengan class lain, diantaranya :
+- Class Pelanggan dengan Class Makanan : Asosiasi, yang merupakan relasi antar class dengan makna umum.
+- Class Burger ke class Makanan : Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari subclass ke superclass.
+- Class Sandwich ke class Makanan :  Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari subclass ke superclass.
+
 ```mermaid
 classDiagram
     Makanan <|-- Burger
