@@ -10,9 +10,8 @@
 2. Membuat Design Database di php myadmin (Mita)
 3. Membuat Class Diagram di mermaid live editor (Fista)
 4. Membuat ER Diagram di mermaid live editor (Della)
-5. Membuat kode program OOP di netbeans (Diskusi melalui Google Meet : Mita, Della, Fista)
-6. Membuat kode program koneksi di netbeans (Diskusi melalui Google Meet : Mita, Della, Fista)
-7. Membuat desain GUI di scene builder (Diskusi melalui Google Meet : Mita, Della, Fista)
+5. Membuat kode program di netbeans (Diskusi melalui Google Meet : Mita, Della, Fista)
+6. Membuat desain GUI di scene builder (Diskusi melalui Google Meet : Mita, Della, Fista)
 
 
 # Sistem Informasi Pemesanan Makanan
@@ -30,12 +29,12 @@ Pada Class Diagram Sistem Pemesanan Makanan, terdapat 4 class yaitu : Pelanggan,
 - Class Burger dan Class Sandwich. Class Burger dan class Sandwich merupakan subclass dari class Makanan. Di dalamnya terdapat atribut Jumlah dan method TotalH.
 
 Untuk menentukan visibilitas anggota class (atribut dan method), notasi yang ditempatkan sebelum nama anggota yaitu :
-Public (+), Private (-), Protected (#)
+Public (+), Private (-), Protected (#).
 
 Setiap class berelasi dengan class lain, diantaranya :
 - Class Pelanggan dengan Class Makanan (--) : Link (Solid). Di desain diagram juga relasi ini bisa disebut relasi Asosiasi, yang merupakan relasi antar class dengan makna umum.
-- Class Makanan ke class Burger (<|--) : Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari superclass ke subclass.
-- Class Makanan ke class Sandwich (<|--) :  Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari superclass ke subclass.
+- Class Burger ke class Makanan (<|--) : Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari subclass ke superclass.
+- Class Sandwich ke class Makanan (<|--) :  Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari subclass ke superclass.
 
 
 ```mermaid
@@ -121,6 +120,16 @@ erDiagram
 ```
 
 ### Design Class Diagram for JavaFX and Database
+Design Class Diagram untuk JavaFX dan Database, terdapat 6 class yaitu Class Pelanggan, Makanan, Burger, Sandwich, PemesananMakananDataModel, dan koneksi. 
+Tipe data dari masing-masing class menggunakan StringProperty untuk tipe data String, IntegerProperty untuk yang bertipe integer, dll. Tipe data atau class ini merupakan class yang observable yang digunakan ketika membaca form di JavaFX. Terutama jika menggunakan tabel, maka harus menggunakan class yang sifatnya observable. 
+
+Class PemesananMakananDataModel digunakan untuk berinteraksi dengan databasenya, apakah akan menambah data, mengambil data dari database. Class PemesananMakananDataModel melakukan koneksi dengan bantuan class koneksi.
+Relasi antar class :
+- Class Burger ke Makanan (<|--) : Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari subclass ke superclass. Class Burger merupakan subclass dari class Makanan.
+- Class Sandwich ke Makanan (<|--) : Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari subclass ke superclass. Class sANDWICH merupakan subclass dari class Makanan.
+- Class Pelanggan dengan Class Makanan ("*".."*") : Asosiasi, satu atau banyak pelanggan dapat mengorder satu atau banyak makanan.
+- Relasi dari class PemesananMakananData model ke class Pelanggan adalah relasi Asosiasi dengan sifatnya agregasi dengan makna semua bagian. Jadi harus ada objek pelanggan di PemesananMakananDataModel.
+
 ```mermaid
 classDiagram
     Makanan <|-- Burger
