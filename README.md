@@ -21,7 +21,10 @@
 # Desain
 Untuk melihat diagram di bawah ini, instal plugin mermaid-diagram di https://github.com/Redisrupt/mermaid-diagrams
 
-### Class Diagram
+# Class Diagram
+Class Diagram dalam Unified Modeling Language (UML) adalah jenis diagram struktur statis yang mendeskripsikan struktur statis yang mendeskripsikan struktur sistem dengan menunjukkan class sistem, atribut, operasi (atau method), dan hubungan antar objek (relasi).
+
+### Penjelasan Class Diagram
 Pada Class Diagram Sistem Pemesanan Makanan, terdapat 4 class yaitu : Pelanggan, Makanan, Burger, dan Sandwich.
 - Di dalam class Pelanggan terdapat beberapa atribut ID, NamaPelanggan, Makanan (merupakan atribut dari class Makanan), Burger (aribut dari class Burger), dan Sandwich (atribut dari class Sandwich). Di dalamnya juga terdapat beberapa method yaitu setNama, setID, getID, getNama, getMakanan.
 - Class Makanan. Class Makanan merupakan sebuah class abstract dan juga Superclass dari class Burger dan Sandwich. Di dalam class Makanan terdapat beberapa atribut, diantaranya : Nama, ID, Jumlah, Harga, dan Total. Dan juga terdapat beberapa method yaitu : Constructor Makanan, TotalH, getHarga, getNama, getTotal, getJumlah, setNama, setHarga, setJumlah, dan getID.
@@ -35,6 +38,7 @@ Setiap class berelasi dengan class lain, diantaranya :
 - Class Makanan ke class Burger (<|--) : Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari superclass ke subclass.
 - Class Makanan ke class Sandwich (<|--) :  Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari superclass ke subclass.
 
+### Desain Class Diagram
 ```mermaid
 classDiagram
     Makanan <|-- Burger
@@ -86,7 +90,13 @@ classDiagram
  ```   
 
 
-### ER Diagram
+# ER Diagram
+Entity Relationship Diagram adalah diagram yang menggambarkan hal-hal yang saling terkait dalam domain tertentu. ER Diagram terrdiri dari entitas dan menentukan hubungan antar entitas.
+
+### Penjelasan ER Diagram
+ER Diagram dari Sistem Pemesanan Makanan terdiri dari 4 entitas yaitu entitas Pelanggan, Makanan, Burger, dan Sandwich. Masing-masing entitas tersebut saling berhubungan. Seorang pelanggan dapat order makanan. Makanan yang dapat diorder ada 2 jenis, yaitu Burger dan Sandwich. Jadi seorang pelanggan dapat membeli Burger ataupun Sandwich.
+
+### Desain ER Diagram
 ```mermaid
 erDiagram
     Pelanggan ||..|| Makanan : order
