@@ -126,10 +126,10 @@ Tipe data dari masing-masing class menggunakan StringProperty untuk tipe data St
 Class PemesananMakananDataModel digunakan untuk berinteraksi dengan databasenya, apakah akan menambah data, mengambil data dari database. Class PemesananMakananDataModel melakukan koneksi dengan bantuan class koneksi.
 Relasi antar class :
 - Class Burger ke Makanan (<|--) : Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari subclass ke superclass. Class Burger merupakan subclass dari class Makanan.
-- Class Sandwich ke Makanan (<|--) : Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari subclass ke superclass. Class sANDWICH merupakan subclass dari class Makanan.
+- Class Sandwich ke Makanan (<|--) : Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari subclass ke superclass. Class Sandwich merupakan subclass dari class Makanan.
 - Class Pelanggan dengan Class Makanan ("*".."*") : Asosiasi, satu atau banyak pelanggan dapat mengorder satu atau banyak makanan.
 - Relasi dari class PemesananMakananData model ke class Pelanggan adalah relasi Asosiasi dengan sifatnya agregasi dengan makna semua bagian. Jadi harus ada objek pelanggan di PemesananMakananDataModel.
-
+- Class PemesananMakananData Model ke class koneksi : asosiai, yang merupakan relasi antar class dengan makna umum.
 ```mermaid
 classDiagram
     Makanan <|-- Burger
