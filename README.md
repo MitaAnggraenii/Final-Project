@@ -130,7 +130,7 @@ Relasi antar class :
 - Class Sandwich ke Makanan (<|--) : Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari subclass ke superclass. Class Sandwich merupakan subclass dari class Makanan.
 - Class Pelanggan dengan Class Makanan ("*".."*") : Asosiasi, satu atau banyak pelanggan dapat mengorder satu atau banyak makanan.
 - Relasi dari class PemesananMakananData model ke class Pelanggan adalah relasi Asosiasi dengan sifatnya agregasi dengan makna semua bagian. Jadi harus ada objek pelanggan di PemesananMakananDataModel.
-- Class PemesananMakananData Model ke class koneksi : asosiai, yang merupakan relasi antar class dengan makna umum.
+- Class PemesananMakananData Model ke class koneksi : asosiaSi, yang merupakan relasi antar class dengan makna umum.
 ```mermaid
 classDiagram
     Makanan <|-- Burger
