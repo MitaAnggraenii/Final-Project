@@ -32,8 +32,8 @@ Public (+), Private (-), Protected (#)
 
 Setiap class berelasi dengan class lain, diantaranya :
 - Class Pelanggan dengan Class Makanan (--) : Link (Solid). Di desain diagram juga relasi ini bisa disebut relasi Asosiasi, yang merupakan relasi antar class dengan makna umum.
-- Class Burger ke class Makanan (<|--) : Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari subclass ke superclass.
-- Class Sandwich ke class Makanan (<|--) :  Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari subclass ke superclass.
+- Class Makanan ke class Burger (<|--) : Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari superclass ke subclass.
+- Class Makanan ke class Sandwich (<|--) :  Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari superclass ke subclass.
 
 ```mermaid
 classDiagram
