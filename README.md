@@ -10,8 +10,8 @@
 2. Membuat Design Database di php myadmin (Mita)
 3. Membuat Class Diagram di mermaid live editor (Fista)
 4. Membuat ER Diagram di mermaid live editor (Della)
-5. Membuat kode program di netbeans (Diskusi melalui Google Meet : Mita, Della, Fista)
-6. Membuat kode program db helper di netbeans (Diskusi melalui Google Meet : Mita, Della, Fista)
+5. Membuat kode program OOP di netbeans (Diskusi melalui Google Meet : Mita, Della, Fista)
+6. Membuat kode program koneksi di netbeans (Diskusi melalui Google Meet : Mita, Della, Fista)
 7. Membuat desain GUI di scene builder (Diskusi melalui Google Meet : Mita, Della, Fista)
 
 
