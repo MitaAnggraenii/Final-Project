@@ -28,14 +28,12 @@ Pada Class Diagram Sistem Pemesanan Makanan, terdapat 4 class yaitu : Pelanggan,
 - Class Burger dan Class Sandwich. Class Burger dan class Sandwich merupakan subclass dari class Makanan. Di dalamnya terdapat atribut Jumlah dan method TotalH.
 
 Untuk menentukan visibilitas anggota class (atribut dan method), notasi yang ditempatkan sebelum nama anggota yaitu :
-Public : +
-Private : -
-Protected : #
+Public (+), Private (-), Protected (#)
 
 Setiap class berelasi dengan class lain, diantaranya :
-- Class Pelanggan dengan Class Makanan : Asosiasi, yang merupakan relasi antar class dengan makna umum.
-- Class Burger ke class Makanan : Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari subclass ke superclass.
-- Class Sandwich ke class Makanan :  Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari subclass ke superclass.
+- Class Pelanggan dengan Class Makanan (--) : Link (Solid). Di desain diagram juga relasi ini bisa disebut relasi Asosiasi, yang merupakan relasi antar class dengan makna umum.
+- Class Burger ke class Makanan (<|--) : Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari subclass ke superclass.
+- Class Sandwich ke class Makanan (<|--) :  Inheritance, yang merupakan relasi untuk class pewarisan atau relasi dari subclass ke superclass.
 
 ```mermaid
 classDiagram
